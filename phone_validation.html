@@ -1,0 +1,24 @@
+
+<html>
+<body>
+<script type="text/javascript">
+function formvali() {
+
+    var phone = document.forms["sform"]["phone"].value;
+  
+    var phonereg = new RegExp("^(?:\\+88|88)?01[3-9]\\d{8}$");
+    
+   
+    if (!phonereg.test(phone)) {
+        window.alert("Please enter a valid 11-digit Bangladeshi phone number!");
+        return false;
+    }
+  
+</script>
+
+<form id="sform" name="sform" onsubmit="return formvali()">
+    Phone Number: <input type="text" name="phone" id="phone""><br><br>
+    <input type="submit" value="Check Phone Number">
+</form>
+</body>
+</html>
