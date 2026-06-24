@@ -1,1 +1,26 @@
 
+<html>
+<body>
+
+<script type="text/javascript">
+function formvali() {   
+    var email = document.forms["sform"]["email"].value;
+    
+   
+    var emailreg = new RegExp("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
+    
+  
+    if (!emailreg.test(email)) {
+        window.alert("Please enter a valid email address!");
+        return false;
+    }
+    
+}
+</script>
+
+<form id="sform" name="sform" onsubmit="return formvali()">
+    Email: <input type="text" name="email" id="email"><br><br>
+    <input type="submit" value="Check Email">
+</form>
+</body>
+</html>
